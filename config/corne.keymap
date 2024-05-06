@@ -75,6 +75,16 @@
             bindings = <&kp LG(SPACE)>;
             key-positions = <36 40>;
         };
+
+        rightctrl {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <31 32>;
+        };
+
+        rightoption {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <7 8>;
+        };
     };
 
     keymap {
