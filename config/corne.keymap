@@ -31,6 +31,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             flavor = "hold-preferred";
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp GRAVE>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
@@ -130,7 +139,7 @@
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT                &kp HASH               &kp DLLR   &kp PRCNT           &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &kp ESC          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp SINGLE_QUOTE    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT              &kp BSLH               &trans
-&trans  &trans           &trans                &trans                 &trans     &kp GRAVE           &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC              &kp PIPE               &trans
+&trans  &trans           &trans                &trans                 &trans     &new_behavior       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC              &kp PIPE               &trans
                                                &kp LGUI               &to 0      &kp SPACE           &kp RET    &none      &kp RALT
             >;
         };
